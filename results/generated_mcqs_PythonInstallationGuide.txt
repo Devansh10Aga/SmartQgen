@@ -1,0 +1,177 @@
+## MCQ 1
+Question: Where can you download the Python executable file?
+A) https://www.python.com/
+B) https://www.python.org/downloads/
+C) https://www.python.org/install/
+D) https://www.python.com/download/
+Correct Answer: B
+
+
+## MCQ 2
+Question: What is the first step in the Python installation process?
+A) Run the exe file.
+B) Download the exe file.
+C) Mark "Add Python to Path."
+D) Open CMD.
+Correct Answer: B
+
+
+## MCQ 3
+Question: Which option should be marked during custom installation?
+A) Add Python to Path
+B) Install launcher for all users (recommended)
+C) Associate files with Python (requires the py launcher)
+D) All of the above
+Correct Answer: D
+
+
+## MCQ 4
+Question:  What should you do if you want to change the default installation directory?
+A) Click "Install" directly.
+B) Modify the path during custom installation.
+C) Click "Cancel".
+D)  Run the installer as administrator.
+Correct Answer: B
+
+
+## MCQ 5
+Question: What indicates a successful Python installation in CMD?
+A) A message saying "Python installed successfully."
+B) Three greater than symbols (>>>).
+C) Three less than symbols (<<<).
+D) The Python version number.
+Correct Answer: C
+
+
+## MCQ 6
+Question: What should you type in CMD to access the Python shell?
+A) python
+B) Python
+C) python3
+D) py
+Correct Answer: B
+
+
+## MCQ 7
+Question: After running the exe file, what is the next important step in the installation process?
+A) Clicking "Close".
+B) Selecting "Custom Installation".
+C) Typing "Python" in CMD.
+D) Opening the Python IDE.
+Correct Answer: B
+
+
+## MCQ 8
+Question: What does marking the "Add Python to Path" option do?
+A) Allows you to run Python commands from any directory in CMD.
+B) Sets the default installation directory.
+C) Creates a shortcut on your desktop.
+D) Automatically opens CMD after installation.
+Correct Answer: A
+
+
+## MCQ 9
+Question: After completing the installation, what is the final step in the installer window?
+A) Click "Finish".
+B) Click "Close".
+C) Click "OK".
+D) Click "Next".
+Correct Answer: B
+
+
+## MCQ 10
+Question: Which step involves a user prompt where you might need to click "Yes"?
+A) Running the exe file.
+B) Starting the installation process.
+C) Adding Python to Path.
+D) Closing the installation window.
+Correct Answer: B
+
+
+## MCQ 11
+Question: What does the Python shell allow you to do?
+A) Install Python packages.
+B) Download the Python installer.
+C) Execute Python code interactively.
+D) Edit Python files.
+Correct Answer: C
+
+
+## MCQ 12
+Question:  What is the purpose of the provided link?
+A) To access the Python documentation.
+B) To download the Python installer.
+C) To open the Python shell.
+D) To contact Python support.
+Correct Answer: B
+
+
+## MCQ 13
+Question:  Which step confirms that Python is correctly installed and accessible?
+A) Running the exe file.
+B) Typing "Python" in CMD and seeing the Python shell.
+C) Closing the installer window.
+D) Marking "Add Python to Path."
+Correct Answer: B
+
+
+## MCQ 14
+Question: The instructions mention "Custom Installation." What does this allow you to do?
+A) Choose specific features to install.
+B) Change the installation location.
+C) Both A and B
+D) None of the above
+Correct Answer: C
+
+
+
+## MCQ 15
+Question: Which command-line interface is used to test the Python installation?
+A) PowerShell
+B) Bash
+C) CMD
+D) Terminal
+Correct Answer: C
+
+
+## MCQ 16
+Question: What is the significance of the "three less than symbols"?
+A) They indicate an error in the installation.
+B) They represent the Python shell prompt.
+C) They signify the end of the installation process.
+D) They are used to exit the Python shell.
+Correct Answer: B
+
+
+## MCQ 17
+Question: What file type are you downloading from the provided link?
+A) .zip
+B) .tar.gz
+C) .exe
+D) .msi
+Correct Answer: C
+
+
+## MCQ 18
+Question: What should you do after clicking on "Install" during the installation process?
+A) Open CMD.
+B) Wait for the installation to complete.
+C) Restart your computer.
+D) Type "Python" in the search bar.
+Correct Answer: B
+
+## MCQ 19
+Question:  What is the second step in testing the Python installation?
+A) Open CMD.
+B) Type "Python".
+C) Observe the three less than symbols.
+D) Close CMD.
+Correct Answer: B
+
+## MCQ 20
+Question:  What action triggers the actual installation process after the initial setup choices?
+A) Clicking "Next."
+B) Clicking "Install."
+C) Clicking "Close."
+D) Clicking "Finish."
+Correct Answer: B

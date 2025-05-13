@@ -1,0 +1,158 @@
+<!--templates/generated_test.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Test</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 80%;
+            max-width: 960px;
+            margin-top: 30px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: 500;
+        }
+        h2 {
+            color: #555;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+            font-size: 1.8em;
+            font-weight: 400;
+        }
+        .question-group {
+            margin-bottom: 20px;
+        }
+        .question-item {
+            margin-bottom: 15px;
+        }
+        .question-text {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .mcq-options {
+            margin-left: 20px;
+        }
+        .mcq-option {
+            margin-bottom: 3px;
+        }
+        .answer-section {
+            color: #555;
+            font-style: italic;
+            margin-left: 10px;
+        }
+        .download-options {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .download-button {
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin: 0 15px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .download-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        .no-questions {
+            color: #777;
+            font-style: italic;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Generated Questions</h1>
+        {% if generated_questions %}
+            {% if 'fill_in_the_blanks' in generated_questions and generated_questions['fill_in_the_blanks'] %}
+                <div class="question-group">
+                    <h2>Fill in the Blanks</h2>
+                    {% for q_with_answer in generated_questions['fill_in_the_blanks'] %}
+                        <div class="question-item">
+                            <p class="question-text">{{ q_with_answer }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            {% if 'mcqs' in generated_questions and generated_questions['mcqs'] %}
+                <div class="question-group">
+                    <h2>Multiple Choice Questions</h2>
+                    {% for q_with_answer in generated_questions['mcqs'] %}
+                        <div class="question-item">
+                            {% set parts = q_with_answer.split('\n') %}
+                            <p class="question-text">{{ parts[0] }}</p>
+                            <div class="mcq-options">
+                                {% for option in parts[1:] %}
+                                    <p class="mcq-option">{{ option }}</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            {% if 'short_answers' in generated_questions and generated_questions['short_answers'] %}
+                <div class="question-group">
+                    <h2>Short Answer Questions</h2>
+                    {% for q_with_answer in generated_questions['short_answers'] %}
+                        <div class="question-item">
+                            {% if '(' in q_with_answer and ')' in q_with_answer %}
+                                {% set parts = q_with_answer.split('(') %}
+                                <p class="question-text">{{ parts[0].strip() }}</p>
+                                <p class="answer-section">({{ parts[-1][:-1] }})</p>
+                            {% else %}
+                                <p class="question-text">{{ q_with_answer }}</p>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <div class="download-options">
+                <h3>Download Questions</h3>
+                {% if download_data %}
+                <a href="/download/pdf?data={{ download_data|urlencode }}" class="download-button">Download as PDF</a>
+                <a href="/download/txt?data={{ download_data|urlencode }}" class="download-button">Download as TXT</a>
+                {% endif %}
+            </div>
+        {% else %}
+            <p class="no-questions">No questions were generated based on your input.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

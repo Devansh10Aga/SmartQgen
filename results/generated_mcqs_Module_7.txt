@@ -1,0 +1,80 @@
+## MCQ 1
+Question: What are the two main types of IoT protocols mentioned in the text?
+A) Wired and Wireless Protocols
+B) Communication Protocols and IoT Data Protocols
+C) Short-range and Long-range Protocols
+D) IP and Non-IP Protocols
+Correct Answer: B
+
+## MCQ 2
+Question: Which of the following is NOT a communication protocol mentioned in the text?
+A) HTTP
+B) MQTT
+C) LoRaWAN
+D) Bluetooth
+Correct Answer: B
+
+## MCQ 3
+Question: 6LoWPAN operates in which frequency range?
+A) 5 GHz
+B) 900 MHz
+C) 2.4 GHz
+D) 868 MHz
+Correct Answer: C
+
+## MCQ 4
+Question: Which transport layer protocol is considered the main alternative to TCP and is often used for real-time applications?
+A) SCTP
+B) DCCP
+C) UDP
+D) TLS
+Correct Answer: C
+
+## MCQ 5
+Question:  What does the acronym IBSS stand for in the context of IEEE 802.11?
+A) Integrated Basic Service Set
+B) Independent Basic Service Set
+C) Internal Base Station System
+D) Internet-Based Service Set
+Correct Answer: B
+
+## MCQ 6
+Question: LoRaWAN uses which type of radio bands for network deployments?
+A) Licensed Cellular Bands
+B) Unlicensed ISM Bands
+C) Licensed Satellite Bands
+D) Short Range UWB Bands
+Correct Answer: B
+
+## MCQ 7
+Question:  Which of the following is NOT a component of the LoRaWAN architecture?
+A) End Devices
+B) Gateways
+C) Network Server
+D) Bluetooth Controller
+Correct Answer: D
+
+## MCQ 8
+Question: What type of routing protocol is RPL?
+A) Link State
+B) Distance Vector and Source Routing
+C) Path Vector
+D) Border Gateway Protocol
+Correct Answer: B
+
+## MCQ 9
+Question: MQTT is primarily based on which communication model?
+A) Client-Server
+B) Peer-to-Peer
+C) Publish-Subscribe
+D) Request-Response
+Correct Answer: C
+
+
+## MCQ 10
+Question:  CoAP primarily uses which transport layer protocol?
+A) TCP
+B) UDP
+C) SCTP
+D) DCCP
+Correct Answer: B

@@ -1,0 +1,42 @@
+## MCQ 1
+Question: What is the primary motivation for developing this decentralized file-sharing platform?
+A) To explore cutting-edge technologies like blockchain and IPFS.
+B) To enhance security and privacy in digital content distribution.
+C) To create a user-friendly interface for file management.
+D) To implement incentive mechanisms for storage contribution.
+Correct Answer: B
+
+## MCQ 2
+Question: What technology is planned to be used for decentralized file storage?
+A) Blockchain
+B) Centralized servers
+C) IPFS
+D) Smart contracts
+Correct Answer: C
+
+
+## MCQ 3
+Question: What are the vulnerabilities of centralized file-sharing systems mentioned in the text?
+A) Slow transfer speeds and limited storage capacity
+B) Server downtime and cyberattacks on a central repository
+C) Lack of user-friendly interface and complex navigation
+D) High cost of maintenance and difficulty in scaling
+Correct Answer: B
+
+
+## MCQ 4
+Question: How does the platform plan to manage user permissions and file access?
+A) Through centralized server administration
+B) Using smart contracts on a blockchain
+C) By relying on user self-regulation
+D) Through a combination of IPFS and centralized databases
+Correct Answer: B
+
+
+## MCQ 5
+Question: Which feature is NOT explicitly mentioned as a functional requirement of the platform?
+A) User registration and authentication
+B) File uploading and sharing
+C) Integration with social media platforms
+D) Decentralized storage
+Correct Answer: C

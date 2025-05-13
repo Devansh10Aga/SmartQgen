@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartQgen</title>
+    <style>
+       
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+           
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: #343a40;
+            padding: 15px 30px;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            gap: 20px;
+            position: relative;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .navbar h2 {
+            margin: 0;
+            font-size: 28px;
+            color: #eee;
+        }
+
+        .navbar button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+
+        .navbar button:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            width: 60%;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 0.5s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            font-weight: 500;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        input[type="file"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-top: 6px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+            background-color: #fff; 
+            color: #333;
+
+        }
+
+        input[type="file"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            background-color: #3b82f6;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color:  #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button[type="submit"]:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .question-type-group {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .question-type-group h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .input-row {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .input-row label {
+            width: auto;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .input-row select,
+        .input-row input[type="number"] {
+            flex-grow: 1;
+            width: auto;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .auth-button {
+            position: absolute;
+            top: 15px;
+            right: 30px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+
+        .auth-button:hover {
+            background-color: #0056b3;
+        }
+
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: float 6s infinite;
+        }
+
+        .shape:nth-child(1) {
+            width: 30px;
+            height: 30px;
+            background-color: #fcd34d;
+            top: 10%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 40px;
+            height: 40px;
+            background-color: #48bb78;
+            top: 30%;
+            left: 40%;
+            animation-delay: 1s;
+        }
+
+        .shape:nth-child(3) {
+            width: 20px;
+            height: 20px;
+            background-color: #f56565;
+            top: 50%;
+            left: 10%;
+            animation-delay: 2s;
+        }
+
+        .shape:nth-child(4) {
+            width: 60px;
+            height: 60px;
+            background-color: #a0aec0;
+            top: 70%;
+            left: 60%;
+            animation-delay: 0.5s;
+            animation-duration: 8s;
+        }
+
+        .shape:nth-child(5) {
+            width: 25px;
+            height: 25px;
+            background-color: #d69e2e;
+            top: 80%;
+            left: 30%;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        .container {
+            background: #1e293b;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #f8fafc;
+        }
+
+        label {
+            color: #cbd5e0;
+        }
+
+        input[type="file"],
+        input[type="number"],
+        select {
+            border: 1px solid #4b5563;
+            background-color: #2d3748;
+            color: #f8fafc;
+        }
+
+        input[type="file"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            border-color: #60a5fa;
+            box-shadow: 0 0 5px rgba(96, 165, 250, 0.5);
+        }
+
+        .question-type-group {
+            border: 1px solid #4b5563;
+            background-color: #1e293b;
+        }
+
+        .question-type-group h3 {
+            color: #f8fafc;
+            border-bottom: 2px solid #4b5563;
+        }
+
+        .input-row label {
+            color: #cbd5e0;
+        }
+
+        .input-row select,
+        .input-row input[type="number"] {
+            border: 1px solid #4b5563;
+            background-color: #2d3748;
+            color: #f8fafc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-animation">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="navbar">
+        <div class="navbar-left">
+            <h2>SmartQgen</h2>
+            <button onclick="window.location.href='/help'">FAQ</button>
+            <button onclick="window.location.href='http://localhost:5000/quiz'">Quiz</button>
+        </div>
+        {% if session.user_id %}
+        <button onclick="window.location.href='/logout'" class="auth-button">Logout</button>
+    {% else %}
+        <button onclick="window.location.href='/login'" class="auth-button">Sign In / Sign Up</button>
+    {% endif %}
+    
+    </div>
+
+    <div class="container">
+        <h1>Generate Test from Your Files</h1>
+        <form action="/generate_test" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Upload your document (PDF, TXT, DOCX):</label>
+                <input type="file" name="file" id="file" required>
+            </div>
+
+            <div class="form-group">
+                <label>Type of Questions:</label>
+                <div class="question-type-group">
+                    <h3>Fill in the Blanks</h3>
+                    <div class="input-row">
+                        <label for="fib_difficulty">Difficulty:</label>
+                        <select name="fib_difficulty" id="fib_difficulty">
+                            <option value="Easy">Easy</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Hard">Hard</option>
+                        </select>
+                    </div>
+                    <div class="input-row">
+                        <label for="fib_num_questions">Number of Questions:</label>
+                        <input type="number" name="fib_num_questions" id="fib_num_questions" min="0" value="0">
+                    </div>
+                </div>
+
+                <div class="question-type-group">
+                    <h3>Multiple Choice Questions (MCQs)</h3>
+                    <div class="input-row">
+                        <label for="mcq_difficulty">Difficulty:</label>
+                        <select name="mcq_difficulty" id="mcq_difficulty">
+                            <option value="Easy">Easy</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Hard">Hard</option>
+                        </select>
+                    </div>
+                    <div class="input-row">
+                        <label for="mcq_num_questions">Number of Questions:</label>
+                        <input type="number" name="mcq_num_questions" id="mcq_num_questions" min="0" value="0">
+                    </div>
+                </div>
+
+                <div class="question-type-group">
+                    <h3>Short Answers</h3>
+                    <div class="input-row">
+                        <label for="short_answer_difficulty">Difficulty:</label>
+                        <select name="short_answer_difficulty" id="short_answer_difficulty">
+                            <option value="Easy">Easy</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Hard">Hard</option>
+                        </select>
+                    </div>
+                    <div class="input-row">
+                        <label for="short_answer_num_questions">Number of Questions:</label>
+                        <input type="number" name="short_answer_num_questions" id="short_answer_num_questions" min="0"
+                            value="0">
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit">Generate</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

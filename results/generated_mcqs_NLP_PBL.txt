@@ -1,0 +1,39 @@
+## MCQ 1
+Question: What is the primary objective of the project described in the abstract?
+A) To analyze audio inputs for various mental health conditions.
+B) To develop a text-based emotion and sentiment analysis system for depression prediction.
+C) To compare the performance of different machine learning models for sentiment analysis.
+D) To explore the use of multimodal data in mental health diagnostics.
+Correct Answer: B
+
+## MCQ 2
+Question: Which deep learning models are used in this project's system?
+A) BERT and LSTM
+B) DistilBERT and BiLSTM
+C) RoBERTa and GRU
+D) ALBERT and RNN
+Correct Answer: B
+
+## MCQ 3
+Question: What is the advantage of using DistilBERT over BERT in this specific application?
+A) DistilBERT provides higher accuracy than BERT.
+B) DistilBERT supports multimodal input data.
+C) DistilBERT is more computationally efficient.
+D) DistilBERT is better at capturing long-term dependencies.
+Correct Answer: C
+
+## MCQ 4
+Question: What preprocessing techniques are used to prepare the text data for the model?
+A) Text cleaning, tokenization, padding, and truncation.
+B) Stemming, lemmatization, and part-of-speech tagging.
+C) Named entity recognition and sentiment lexicon matching.
+D) Data augmentation and synthetic data generation.
+Correct Answer: A
+
+## MCQ 5
+Question: According to the results, which model achieved higher accuracy in the emotion and sentiment analysis tasks?
+A) BiLSTM achieved higher accuracy.
+B) Both models achieved the same accuracy.
+C) DistilBERT achieved higher accuracy.
+D) Neither model performed well in the analysis.
+Correct Answer: C

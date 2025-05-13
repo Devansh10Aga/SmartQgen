@@ -1,0 +1,53 @@
+## MCQ 1
+Question: What is the primary purpose of the "Complete Data Structures and Algorithms Guide"?
+
+A) To teach users how to build and develop software applications.
+B) To help users improve their problem-solving skills and ace technical coding interviews, especially at FAANG companies.
+C) To provide a comprehensive overview of computer science concepts.
+D) To encourage users to explore different coding frameworks.
+
+Correct Answer: B
+
+
+## MCQ 2
+Question: According to the guide, approximately how many practice questions should a user solve to feel confident approaching new problems?
+
+A) 20-30
+B) 75-90
+C) 150-200
+D) 500+
+
+Correct Answer: C
+
+
+## MCQ 3
+Question: Which of the following data structures is described as storing objects in nodes in a "snake-like" structure?
+
+A) Array
+B) Hash map
+C) Linked list
+D) Tree
+
+Correct Answer: C
+
+
+## MCQ 4
+Question:  Which approach is recommended for finding subsets or elements in a sorted array?
+
+A) Sliding Window
+B) Binary Search
+C) 2 Pointers
+D) Recursion
+
+Correct Answer: C
+
+
+## MCQ 5
+Question: What is described as "backtracking + memoization"?
+
+A) Recursion
+B) Dynamic Programming
+C) Sliding Window
+D) Binary Search
+
+Correct Answer: B

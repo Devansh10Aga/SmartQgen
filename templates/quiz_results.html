@@ -1,0 +1,89 @@
+<!--quiz_results.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .score {
+            font-size: 2em;
+            color: green;
+            margin-bottom: 15px;
+        }
+
+        .message {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .home-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .home-button:hover {
+            background-color: #0056b3;
+        }
+        .question-result {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 3px solid #007bff; 
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            text-align: left;
+        }
+        .question-text {
+            font-weight: bold;
+            color: #333;
+        }
+        .correct-answer {
+            color: #28a745; 
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Results</h1>
+        <p class="score">Your Score: {{ score }} / {{ total_questions }}</p>
+        <p class="message">Here are the correct answers:</p>
+        {% for q in all_questions %}
+        <div class="question-result">
+            <p class="question-text">{{ q.question }}</p>
+            <p class="correct-answer">Correct Answer: {{ q.correct_answer }}) {{ q.options[q.correct_answer] }}</p>
+        </div>
+        {% endfor %}
+        <a href="http://localhost:5000/" class="home-button">Back to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+## MCQ 1
+Question: Which of the following is NOT a core component of the Internet of Things (IoT)?
+A) Physical Object (Controller, Sensor, and Actuators)
+B) Connectivity (Internet)
+C) Artificial Intelligence Algorithms
+D) Controller
+Correct Answer: C
+
+
+## MCQ 2
+Question:  The IoT Reference Model layer responsible for converting protocols, routing data, and fast-path logic for low-latency decision-making is:
+A) Data Accumulation
+B) Edge Computing
+C) Connectivity
+D) Data Abstraction
+Correct Answer: B
+
+
+## MCQ 3
+Question: In the context of Machine-to-Machine (M2M) communication, which stage involves interpreting the collected data and deciding on appropriate actions?
+A) Transmission of data
+B) Collection of data
+C) Assessment of data
+D) Response to information
+Correct Answer: C
+
+
+## MCQ 4
+Question: Which communication protocol is NOT commonly associated with M2M communication?
+A) ZigBee
+B) MQTT
+C) Modbus
+D) HTTP
+Correct Answer: B
+
+
+## MCQ 5
+Question:  Which of the following is NOT a characteristic often associated with M2M devices?
+A) High mobility
+B) Time-controlled data transmission
+C) Small data transmissions
+D) Low power consumption
+Correct Answer: A
